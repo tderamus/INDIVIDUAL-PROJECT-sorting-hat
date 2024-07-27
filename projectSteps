@@ -1,0 +1,6 @@
+1. Create HTML structure for the project
+	-need selectors for project introduction (using bootstrap) card
+
+2. Create HTML selector for redering cards to the DOM
+3. Create HTML selector for buttons to be placed on the application
+4. Create Render to DOM utility function
