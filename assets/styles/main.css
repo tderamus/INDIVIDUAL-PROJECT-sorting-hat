@@ -1,0 +1,21 @@
+
+/* Style title and intro section */
+#intro-container{
+  background-color: aquamarine;
+}
+
+#title-container{
+  width: 100%;
+}
+
+#student-houses{
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  padding: 1rem 1rem;
+}
+
+#btn-container{
+  display: flex;
+  justify-content: space-evenly;
+}
