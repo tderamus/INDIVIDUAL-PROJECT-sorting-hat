@@ -18,4 +18,11 @@
 #btn-container{
   display: flex;
   justify-content: space-evenly;
+  margin: 2rem 5rem;
+}
+
+/* style card container section */
+#card-container{
+  display: flex;
+  justify-content: space-evenly;
 }
