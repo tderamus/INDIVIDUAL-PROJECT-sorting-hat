@@ -24,11 +24,3 @@ export const studentCard = (array) => {
 }
 
 
-{/* <div class="card text-bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header">${cardItem.house}</div>
-  <div class="card-image" style="background-image: url(${cardItem.houseImageUrl});"></div>
-    <div 
-    <div class="card-body"></div>
-    <h5 class="card-title">${cardItem.firstName}</h5>
-    <div class="card-body"></div>
-    <h5 class="card-title">${cardItem.lastName}</h5> */}
