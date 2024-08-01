@@ -37,6 +37,7 @@
 #card-container{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 10rem;
 
   img.card-img-top{
     height: 10rem;
@@ -45,7 +46,30 @@
   }
 
   .list-group-item{
-    background-color: rgb(95, 5, 5);
+    background-color: lightblue;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .card-title{
+    text-align: center;
+  }
+
+  .card > button{
+    background-color: red;
+    margin-top: 1rem;
+  }
+  }
+
+#expelled-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10rem;
+
+  .list-group-item{
+    background-color: red;
     color: white;
     text-align: center;
   }
