@@ -1,11 +1,19 @@
 
 /* Style title and intro section */
 #intro-container{
-  background-color: aquamarine;
+  text-align: center;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  .card-body{
+    background-color: teal;
+  }
+
 }
 
-#title-container{
-  width: 100%;
+.mb-3{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 
 #student-houses{
@@ -17,12 +25,37 @@
 
 #btn-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 2rem 5rem;
+
+  button{
+    width: 10rem;
+  };
 }
 
 /* style card container section */
 #card-container{
   display: flex;
   justify-content: space-evenly;
-}
+
+  img.card-img-top{
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto 0 auto;
+  }
+
+  .list-group-item{
+    background-color: rgb(95, 5, 5);
+    color: white;
+    text-align: center;
+  }
+
+  .card-title{
+    text-align: center;
+  }
+
+  .card > button{
+    background-color: black;
+    margin-top: 1rem;
+  }
+  }
