@@ -5,6 +5,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/Gryffindor.webp",
     firstName: "Moody",
     lastName: "Judy",
+    spiritElement: "Fire",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/Hufflepuff.webp",
     firstName: "Paul",
     lastName: "Wall",
+    spiritElement: "Earth",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/RavenclawCrest.webp",
     firstName: "Juno",
     lastName: "Bueno",
+    spiritElement: "Gas",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/Slytherin.webp",
     firstName: "Ready",
     lastName: "Freddie",
+    spiritElement: "Liquid",
   },
 
 ]

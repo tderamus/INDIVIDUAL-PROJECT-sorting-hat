@@ -13,7 +13,9 @@ export const studentCard = (array) => {
         <ul class="list-group list-group-flush">
           <li class="list-group-item">${cardItem.firstName}</li>
           <li class="list-group-item">${cardItem.lastName}</li>
+          <li class="list-group-item">${cardItem.spiritElement}</li>
         </ul>
+        <button class="btn btn-danger" id="expel--${cardItem.id}">EXPEL</button>
       </div> 
       `
   
