@@ -21,7 +21,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/RavenclawCrest.webp",
     firstName: "Juno",
     lastName: "Bueno",
-    spiritElement: "Gas",
+    spiritElement: "Air",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const studentData = [
     houseImageUrl: "../assets/images/Slytherin.webp",
     firstName: "Ready",
     lastName: "Freddie",
-    spiritElement: "Liquid",
+    spiritElement: "Water",
   },
 
 ]
