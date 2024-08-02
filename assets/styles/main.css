@@ -3,17 +3,25 @@
 #intro-container{
   text-align: center;
   font-size: large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: cursive;
   .card-body{
     background-color: teal;
+  }
+
+  .card-title{
+    font-size: 40px;
   }
 
 }
 
 .mb-3{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+  display: inline-flex;
+  height: 2rem;
+  width: 30rem;
+  .btn{
+    width: 10rem;
+    font-size: small;
+  }
 }
 
 #student-houses{
@@ -76,6 +84,11 @@
 
   .card-title{
     text-align: center;
+  }
+
+  .card-body{
+    color: yellow;
+    background-color: black;
   }
 
   .card > button{
