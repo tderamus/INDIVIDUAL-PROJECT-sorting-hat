@@ -4,6 +4,30 @@ import { studentCard } from "../components/studentCard.js";
 import { expelledStudentData } from "../data/expelledStudentData.js";
 import { expelledStudentCard } from "../components/expelledStudentCard.js";
 
+//create click event to get form on DOM when clicked
+
+const addStudentForm =document.querySelector(".add-student-btn");
+
+addStudentForm.addEventListener("click", (e) =>{
+  e.preventDefault();
+  const formcContent = document.querySelector("#student-form");
+  formcContent.innerHTML = `
+   <div class="input-group mb-3">
+      <span class="input-group-text">FirstName:</span>
+      <input type="text" id="firstName" class="form-control" placeholder="" aria-label="FirstName" aria-describedby="basic-addon2">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">LastName::</span>
+      <input type="text"  id="lastName" class="form-control" placeholder="" aria-label="LastName" aria-describedby="basic-addon2">
+    </div>
+
+    <div class="submit-btn">
+      <button type="submit" id="submitStudent" class="btn btn-primary btn-lg">Submit</button>
+    </div>  
+  `
+})
+
 
 
 //get the form element from the DOM
