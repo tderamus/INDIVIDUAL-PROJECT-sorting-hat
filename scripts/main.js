@@ -14,9 +14,9 @@ sortStudent.addEventListener("click", () => {
 })
 
 
-//create click event to get form on DOM when clicked
+//create click event to get addstudent form on DOM when clicked
 const addStudentForm =document.querySelector(".add-student-btn");
-
+//create addStudentForm event listener
 addStudentForm.addEventListener("click", (e) =>{
   e.preventDefault();
   const formcContent = document.querySelector("#student-form");
@@ -39,7 +39,7 @@ addStudentForm.addEventListener("click", (e) =>{
 
 
 
-//get the form element from the DOM
+//get the form element from the DOM to add new students
 const addStudent = document.querySelector("#student-form");
 //Add studentCard to studentData
 const studentAdd = (e) => {
@@ -116,7 +116,28 @@ showSlytherin.addEventListener("click", () => {
 
 
 
-
+//create function to move expelled students to Voldemorts Army list
+//target the card div in the html file//
+const expellCard = document.querySelector("#card-container")
+expellCard.addEventListener('click', (e) => {
+    if (e.target.id.includes("expel")) {
+    const [, id] = e.target.id.split("--");
+    const index = studentData.findIndex(e => e.id === Number(id));
+    const expelStnd = studentData.map(element => element);
+    const expelArray = {
+      house: "Voldemort Army",
+      houseImageUrl: "../assets/images/Lordvoldemort.jpg",
+      firstName: expelStnd[index].firstName,
+      lastName: expelStnd[index].lastName,
+      spiritElement: "Witchcraft",
+    }
+    
+    expelledStudentData.push( expelArray );
+    studentData.splice(index, 1);
+    studentCard(studentData);
+    expelledStudentCard(expelledStudentData);
+    }
+}); 
 
 
 

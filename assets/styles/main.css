@@ -43,24 +43,24 @@
 }
 
 /* style card container section */
-
-/* #card-wrapper{
+/* 
+#card-wrapper{
   display: flex;
 } */
 
 #card-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   margin-bottom: 10rem;
-
+  gap: 2%;
+  
   .card {
-    flex-basis: 20%;
+    flex-basis: 23%;
    }
 
   img.card-img-top{
-    height: 10rem;
-    width: 10rem;
+    height: 50%;
+    width: 50%;
     margin: 0 auto 0 auto;
   }
 
@@ -84,8 +84,10 @@
 
 #expelled-container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 10rem;
+  /* width: 45%; */
 
   .list-group-item{
     background-color: red;
