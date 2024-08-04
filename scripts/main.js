@@ -5,6 +5,15 @@ import { expelledStudentData } from "../data/expelledStudentData.js";
 import { expelledStudentCard } from "../components/expelledStudentCard.js";
 
 
+//get form from DOM to sort cards
+const sortStudent = document.querySelector(".sortStudent-btn");
+
+sortStudent.addEventListener("click", () => {
+  const formInput = document.querySelector("#sorting-form");
+  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort"></input>`
+})
+
+
 //create click event to get form on DOM when clicked
 const addStudentForm =document.querySelector(".add-student-btn");
 
@@ -53,13 +62,11 @@ const studentAdd = (e) => {
   addStudent.reset();
 }
 
-
 //add event listener to addStudent form submit button
 addStudent.addEventListener("submit", studentAdd);
 
 
 //add functions to filter sudents by house assignments
-
 const filter = (array, houseAssigned) => {
   const assignedHouseArray = [];
   array.forEach((option) => {
