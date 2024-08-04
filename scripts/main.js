@@ -4,8 +4,8 @@ import { studentCard } from "../components/studentCard.js";
 import { expelledStudentData } from "../data/expelledStudentData.js";
 import { expelledStudentCard } from "../components/expelledStudentCard.js";
 
-//create click event to get form on DOM when clicked
 
+//create click event to get form on DOM when clicked
 const addStudentForm =document.querySelector(".add-student-btn");
 
 addStudentForm.addEventListener("click", (e) =>{
@@ -56,6 +56,61 @@ const studentAdd = (e) => {
 
 //add event listener to addStudent form submit button
 addStudent.addEventListener("submit", studentAdd);
+
+
+//add functions to filter sudents by house assignments
+
+const filter = (array, houseAssigned) => {
+  const assignedHouseArray = [];
+  array.forEach((option) => {
+    if(option.house === houseAssigned){
+    assignedHouseArray.push(option);
+    }
+  });
+  return assignedHouseArray;
+}
+
+
+//target DOM elements for filtering
+const showAllHouses = document.querySelector(".all-houses");
+const showHufflePuff = document.querySelector(".hufflepuff");
+const showGryffindor = document.querySelector(".gryffindor");
+const showRavenclaw = document.querySelector(".ravenclaw");
+const showSlytherin = document.querySelector(".slytherin");
+
+//show all cards on DOM by filter
+showAllHouses.addEventListener("click", () => {
+  studentCard(studentData);
+});
+
+//show Hufflepuff assignments
+showHufflePuff.addEventListener("click", () => {
+  const hufflepuffAssignments = filter(studentData, "Hufflepuff");
+  studentCard(hufflepuffAssignments);
+});
+
+//show Gryffindorf assignments
+showGryffindor.addEventListener("click", () => {
+  const gryffindorAssignments = filter(studentData, "Gryffindor");
+  studentCard(gryffindorAssignments);
+});
+
+//show Ravenclaw assignments
+showRavenclaw.addEventListener("click", () => {
+  const ravenclawAssignments = filter(studentData, "Ravenclaw");
+  studentCard(ravenclawAssignments);
+});
+
+//show Slytherin assignments
+showSlytherin.addEventListener("click", () => {
+  const slytherinAssignments = filter(studentData, "Slytherin");
+  studentCard(slytherinAssignments);
+});
+
+
+
+
+
 
 
 
