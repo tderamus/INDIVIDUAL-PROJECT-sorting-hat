@@ -9,8 +9,9 @@ import { expelledStudentCard } from "../components/expelledStudentCard.js";
 const sortStudent = document.querySelector(".sortStudent-btn");
 
 sortStudent.addEventListener("click", () => {
-  const formInput = document.querySelector("#sorting-form");
-  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort"></input>`
+  const formInput = document.querySelector("#sorting-form-input");
+  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort"></input>
+                         <a href="#" class="btn btn-primary sortStudentInput-btn">Sort</a>`
 })
 
 
@@ -46,7 +47,7 @@ const studentAdd = (e) => {
   e.preventDefault(); //prevents default action of form button if no function applies
   const studentHouse = studentData.map(element => element);
   const houseChoice = studentHouse[Math.floor(Math.random() * studentHouse.length)];
-  const imageUrl = studentHouse.filter(url => url.houseImageUrl === houseChoice.houseImageUrl);
+  // const imageUrl = studentHouse.filter(url => url.houseImageUrl === houseChoice.houseImageUrl);
   
    const studentObj = {
     id: studentData.length + 1,
@@ -126,7 +127,7 @@ expellCard.addEventListener('click', (e) => {
     const expelStnd = studentData.map(element => element);
     const expelArray = {
       house: "Voldemort Army",
-      houseImageUrl: "../assets/images/Lordvoldemort.jpg",
+      houseImageUrl: expelStnd[index].houseImageUrl,
       firstName: expelStnd[index].firstName,
       lastName: expelStnd[index].lastName,
       spiritElement: "Witchcraft",
@@ -138,6 +139,21 @@ expellCard.addEventListener('click', (e) => {
     expelledStudentCard(expelledStudentData);
     }
 }); 
+
+//target sort button to activate sorting function
+const sortElements = document.querySelector("#sorting-form-input");
+
+sortElements.addEventListener("click", () =>{
+  const sortList = () => {
+    return studentData.map( sortItem => ({
+      house: sortItem.house,
+      houseImageUrl: sortItem.houseImageUrl,
+      firstName: sortItem.firstName,
+      lastName: sortItem.lastName,
+      spiritElement: sortItem.spiritElement
+    })); 
+  }
+ });
 
 
 
