@@ -10,9 +10,8 @@ const sortStudent = document.querySelector(".sortStudent-btn");
 
 sortStudent.addEventListener("click", () => {
   const formInput = document.querySelector("#sorting-form-input");
-  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort"></input>
-                         <a href="#" class="btn btn-primary sortStudentInput-btn">Sort</a>`
-})
+  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort" required /></input>`
+});
 
 
 //create click event to get addstudent form on DOM when clicked
@@ -141,19 +140,17 @@ expellCard.addEventListener('click', (e) => {
 }); 
 
 //target sort button to activate sorting function
-const sortElements = document.querySelector("#sorting-form-input");
+const sortElements = document.querySelector("#sortStudentInput-btn");
 
 sortElements.addEventListener("click", () =>{
-  const sortList = () => {
-    return studentData.map( sortItem => ({
-      house: sortItem.house,
-      houseImageUrl: sortItem.houseImageUrl,
-      firstName: sortItem.firstName,
-      lastName: sortItem.lastName,
-      spiritElement: sortItem.spiritElement
-    })); 
-  }
+    const sortedDisplay = document.querySelector("#sorted-wrapper");
+    const sorted = studentData.map((x) => x);
+    sorted.sort((a,b) => a.spiritElement-b.spiritElement);
+    sortedDisplay.innerHTML = sorted;
+    console.log(sorted);
+    
  });
+
 
 
 
