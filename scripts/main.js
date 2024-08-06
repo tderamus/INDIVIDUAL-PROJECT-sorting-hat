@@ -9,9 +9,9 @@ import { expelledStudentCard } from "../components/expelledStudentCard.js";
 const sortStudent = document.querySelector(".sortStudent-btn");
 
 sortStudent.addEventListener("click", () => {
-  const formInput = document.querySelector("#sorting-form");
-  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort"></input>`
-})
+  const formInput = document.querySelector("#sorting-form-input");
+  formInput.innerHTML = `<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input element to sort" required /></input>`
+});
 
 
 //create click event to get addstudent form on DOM when clicked
@@ -46,7 +46,7 @@ const studentAdd = (e) => {
   e.preventDefault(); //prevents default action of form button if no function applies
   const studentHouse = studentData.map(element => element);
   const houseChoice = studentHouse[Math.floor(Math.random() * studentHouse.length)];
-  const imageUrl = studentHouse.filter(url => url.houseImageUrl === houseChoice.houseImageUrl);
+  // const imageUrl = studentHouse.filter(url => url.houseImageUrl === houseChoice.houseImageUrl);
   
    const studentObj = {
     id: studentData.length + 1,
@@ -126,7 +126,7 @@ expellCard.addEventListener('click', (e) => {
     const expelStnd = studentData.map(element => element);
     const expelArray = {
       house: "Voldemort Army",
-      houseImageUrl: "../assets/images/Lordvoldemort.jpg",
+      houseImageUrl: expelStnd[index].houseImageUrl,
       firstName: expelStnd[index].firstName,
       lastName: expelStnd[index].lastName,
       spiritElement: "Witchcraft",
@@ -138,6 +138,19 @@ expellCard.addEventListener('click', (e) => {
     expelledStudentCard(expelledStudentData);
     }
 }); 
+
+//target sort button to activate sorting function
+const sortElements = document.querySelector("#sortStudentInput-btn");
+
+sortElements.addEventListener("click", () =>{
+    const sortedDisplay = document.querySelector("#sorted-wrapper");
+    const sorted = studentData.map((x) => x);
+    sorted.sort((a,b) => a.spiritElement-b.spiritElement);
+    sortedDisplay.innerHTML = sorted;
+    console.log(sorted);
+    
+ });
+
 
 
 
